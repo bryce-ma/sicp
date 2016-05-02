@@ -43,5 +43,3 @@
 (integral cube 0 1 0.01)
 (integral cube 0 1 0.001)
 
-;;练习1.29，辛普森规则求积分
-(define (simpson-integral f a b n))
