@@ -1,6 +1,6 @@
 #lang scheme
 
-(provide fermat-test)
+(provide fermat-test expmode)
 
 (define (even? n)
   (= (remainder n 2) 0))
@@ -25,4 +25,4 @@
         ((fermat-test expmode n) (fast-prime? n (- times 1)))
         (else false)))
 
-(fast-prime? 10011111 10000) 
+(fast-prime? 10011111 10000)
