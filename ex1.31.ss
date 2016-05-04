@@ -1,14 +1,20 @@
 #lang scheme
 
-;; base 1 for multiply and base 0 for sum
-(define (general-combine-op op term a next b base)
+;; also exercise 1.32
+;; recursive version
+(define (accumulate combiner null-value term a next b)
   (if (> a b)
-      base
-      (op (term a)
-         (general-combine-op op term (next a) next b 1))))
+      null-value
+      (combiner (term a)
+         (accumulate combiner null-value term (next a) next b))))
 
+;;sum
+(define (sum term a next b)
+  (accumulate add 0 term a next b))
+
+;;product
 (define (product term a next b)
-  (general-combine-op * term a next b 1))
+  (accumulate * 1 term a next b))
 
 (define (id x) x)
 
