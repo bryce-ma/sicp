@@ -1,11 +1,12 @@
 #lang scheme
 
-(provide fermat-test expmode)
+(require "math.ss")
 
-(define (even? n)
-  (= (remainder n 2) 0))
-(define (square x)
-  (* x x))
+(provide fermat-test expmode fast-prime?)
+
+;; todo: 100% accurate prime?
+
+
 ;; 素数检测
 (define (expmode base exp m)
   (cond ((= exp 0) 1)
