@@ -1,5 +1,7 @@
 #lang scheme
 
+(provide make-segment start-segment end-segment make-point x-point y-point)
+
 (define (make-segment p1 p2)
   (cons p1 p2))
 (define (start-segment segment)
@@ -28,7 +30,8 @@
   (display (x-point p))
   (display ",")
   (display (y-point p))
-  (display ")"))
+  (display ")")
+  (newline))
 
 (define a-segment
   (make-segment (make-point 0 0) (make-point 4 6)))
