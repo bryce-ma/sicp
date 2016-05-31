@@ -13,8 +13,9 @@
 
 ;; using recursion
 (define (cont-frac n d k)
-  (if (= i k)
-        (/ )))
+  (if (= k 1)
+      (/ (n k) (d k))
+      ()))
 
 (define gold-cut 1.61803398875)
 
