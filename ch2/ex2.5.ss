@@ -1,5 +1,6 @@
 #lang scheme
 
+;;一个配对函数的实例
 (define (cons x y)
   (* (expt 2 x) (expt 3 y)))
 (define (car z)
